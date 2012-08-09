@@ -13,10 +13,65 @@ body { }
 #banner { }
 
 /* Fixed Topbar Navigation */
-body.top-navbar { padding-top: 60px; }
-body.admin-bar .navbar-fixed-top { top: 28px; }
-
-
+body.top-navbar {
+   //padding-top: 60px;
+}
+body.admin-bar .navbar-fixed-top {
+    top: 28px;
+}
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: static;
+}
+.logo-banner {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wf-loading .logo-text {
+    visibility: hidden;
+}
+.wf-active .logo-text, .wf-inactive .logo-text {
+    visibility: visible;
+    font-family: 'Alegreya', serif;
+}
+.logo-text {
+    display: inline-block;
+    color: black;
+    text-align: right;
+    vertical-align: middle;
+}
+.logo-main-text {
+    font-size: 65px;
+}
+.logo-sub-text {
+    padding-top: 10px;
+    font-size: 40px;
+}
+.logo-image {
+    width: 200px;
+}
+.navbar-inner {
+    background: rgb(117,180,229); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(117,180,229,1) 0%, rgba(58,125,193,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(117,180,229,1)), color-stop(100%,rgba(58,125,193,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(117,180,229,1) 0%,rgba(58,125,193,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(117,180,229,1) 0%,rgba(58,125,193,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(117,180,229,1) 0%,rgba(58,125,193,1) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(117,180,229,1) 0%,rgba(58,125,193,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75b4e5', endColorstr='#3a7dc1',GradientType=1 ); /* IE6-9 */
+}
+.navbar .brand {
+    color: black;
+}
+.navbar .nav > li > a {
+    color: black;
+}
+.navbar .nav .active > a, .navbar .nav .active > a:hover {
+    color: #E8C033
+}
+.navbar .nav > li > a:hover {
+    color: #2f4f4f;
+}
 
 /* =============================================================================
    Content
@@ -31,7 +86,12 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
    ========================================================================== */
 
 #main { }
-
+.form-search {
+    margin: 18px 0 18px;
+}
+.form-search label, .form-inline label {
+    display: none;
+}
 
 
 /* =============================================================================
