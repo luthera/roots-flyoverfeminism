@@ -23,9 +23,11 @@ body.admin-bar .navbar-fixed-top {
     position: static;
 }
 .logo-banner {
-    width: 1170px;
     margin-left: auto;
     margin-right: auto;
+}
+.span12 {
+    float: none;
 }
 .wf-loading .logo-text {
     visibility: hidden;
