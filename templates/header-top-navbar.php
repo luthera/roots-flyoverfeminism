@@ -1,13 +1,13 @@
 <header id="banner" class="navbar navbar-fixed-top" role="banner">
   <?php roots_header_inside(); ?>
   <div class="logo-banner span12">
-      <img class="logo-image" src="../img/femplane.jpg"/>
+      <img class="logo-image" src="<?php echo get_template_directory_uri(); ?>/img/femplane.jpg"/>
       <hgroup class="logo-text">
           <h1 class="logo-main-text">
               <?php bloginfo('name'); ?>
           </h1>
           <h2 class="logo-sub-text">
-              east, west, all the rest
+              <?php bloginfo('description'); ?>
           </h2>
       </hgroup>
   </div>
