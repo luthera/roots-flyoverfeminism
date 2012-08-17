@@ -15,6 +15,7 @@
       <header>
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         <?php roots_entry_meta(); ?>
+        <p><?php comments_popup_link(__('Leave a comment', 'roots'), __('Read one comment', 'roots'), __('Read % comments', 'roots')); ?></p>
       </header>
       <div class="entry-content">
         <?php if (is_archive() || is_search()) { ?>
