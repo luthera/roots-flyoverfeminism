@@ -2,7 +2,164 @@
    Base
    ========================================================================== */
 
-body { }
+body {
+    /*To hide the horizontal scroller appearing during the animation*/
+    overflow-x: hidden;
+    background-color: transparent;
+}
+
+blockquote p {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+#clouds{
+    padding: 100px 0;
+    background: #c9dbe9;
+    background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c9dbe9), color-stop(100%, #fff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%); /* Chrome10+,Safari5.1+ */
+    background: -ms-linear-gradient(top, #c9dbe9 0%, #fff 100%); /* IE10+ */
+    background: -o-linear-gradient(top, #c9dbe9 0%, #fff 100%); /* Opera 11.10+ */
+    background: -linear-gradient(top, #c9dbe9 0%, #fff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9dbe9', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+/*Time to finalise the cloud shape*/
+.cloud {
+    width: 200px;
+    height: 60px;
+    background: #fff;
+
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    border-radius: 200px;
+
+    position: relative;
+}
+
+.cloud:before, .cloud:after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 100px; height: 80px;
+    position: absolute; top: -15px; left: 10px;
+
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+
+    -moz-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.cloud:after {
+    width: 120px;
+    height: 120px;
+    top: -55px;
+    left: auto;
+    right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+    -moz-animation: moveclouds 35s linear infinite;
+    -webkit-animation: moveclouds 35s linear infinite;
+    -o-animation: moveclouds 35s linear infinite;
+    animation: moveclouds 35s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+    left: 200px;
+
+    -moz-transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    -o-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.6; /*opacity proportional to the size*/
+
+    /*Speed will also be proportional to the size and opacity*/
+    -moz-animation: moveclouds 45s linear infinite;
+    -webkit-animation: moveclouds 45s linear infinite;
+    -o-animation: moveclouds 45s linear infinite;
+    animation: moveclouds 45s linear infinite;
+ }
+
+ .x3 {
+     left: -250px;
+     top: -200px;
+
+     -moz-transform: scale(0.8);
+     -webkit-transform: scale(0.8);
+     -ms-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     transform: scale(0.8);
+     opacity: 0.8; /*opacity proportional to the size*/
+
+     -moz-animation: moveclouds 35s linear infinite;
+     -webkit-animation: moveclouds 35s linear infinite;
+     -o-animation: moveclouds 35s linear infinite;
+     animation: moveclouds 35s linear infinite;
+}
+
+.x4 {
+    left: 470px;
+    top: -250px;
+
+    -moz-transform: scale(0.75);
+    -webkit-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    transform: scale(0.75);
+    opacity: 0.75; /*opacity proportional to the size*/
+
+    -moz-animation: moveclouds 35s linear infinite;
+    -webkit-animation: moveclouds 35s linear infinite;
+    -o-animation: moveclouds 35s linear infinite;
+    animation: moveclouds 35s linear infinite;
+}
+
+.x5 {
+    left: -150px;
+    top: -150px;
+
+    -moz-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.8; /*opacity proportional to the size*/
+
+    -moz-animation: moveclouds 35s linear infinite;
+    -webkit-animation: moveclouds 35s linear infinite;
+    -o-animation: moveclouds 35s linear infinite;
+    animation: moveclouds 35s linear infinite;
+}
+
+@-moz-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
 
 
 
@@ -44,13 +201,14 @@ body.admin-bar .navbar-fixed-top {
 }
 .logo-main-text {
     font-size: 65px;
+    line-height: normal;
 }
 .logo-sub-text {
-    padding-top: 10px;
     font-size: 40px;
+    line-height: normal;
 }
 .logo-image {
-    width: 200px;
+    //width: 200px;
 }
 .navbar-inner {
     background: rgb(117,180,229); /* Old browsers */
@@ -61,6 +219,8 @@ body.admin-bar .navbar-fixed-top {
     background: -ms-linear-gradient(left,  rgba(117,180,229,1) 0%,rgba(58,125,193,1) 100%); /* IE10+ */
     background: linear-gradient(to right,  rgba(117,180,229,1) 0%,rgba(58,125,193,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75b4e5', endColorstr='#3a7dc1',GradientType=1 ); /* IE6-9 */
+    margin-left: auto;
+    margin-right: auto;
 }
 .navbar .brand {
     color: black;
@@ -95,6 +255,9 @@ body.admin-bar .navbar-fixed-top {
     display: none;
 }
 
+figure {
+    margin: 0 0 1em 1em;
+}
 
 /* =============================================================================
    Sidebar
@@ -145,4 +308,41 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   body.top-navbar {
     padding-top: 0;
   }
+}
+
+@media (max-width: 767px) {
+    /* Fix top padding when using the responsive grid with the fixed topbar */
+    body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #body-wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .logo-banner {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #clouds {
+        height: 100%;
+    }
+
+    .cloud {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logo-text {
+        display:none;
+    }
 }

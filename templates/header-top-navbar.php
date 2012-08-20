@@ -1,7 +1,7 @@
 <header id="banner" class="navbar navbar-fixed-top" role="banner">
   <?php roots_header_inside(); ?>
   <div class="logo-banner span12">
-      <img class="logo-image" src="<?php echo get_template_directory_uri(); ?>/img/femplane.jpg"/>
+      <img class="logo-image" src="<?php echo get_template_directory_uri(); ?>/img/femplane3.png"/>
       <hgroup class="logo-text">
           <h1 class="logo-main-text">
               <?php bloginfo('name'); ?>
@@ -11,7 +11,7 @@
           </h2>
       </hgroup>
   </div>
-  <div class="navbar-inner">
+  <div class="navbar-inner span12">
     <div class="<?php echo WRAP_CLASSES; ?>">
      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
         <span class="icon-bar"></span>

@@ -4,7 +4,7 @@
     <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
     <?php roots_post_inside_before(); ?>
       <header>
-        <h1 class="entry-title"><?php the_title(); ?></h1>
+        <h1 class="entry-title page-header"><?php the_title(); ?></h1>
         <?php roots_entry_meta(); ?>
       </header>
       <div class="entry-content">

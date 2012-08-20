@@ -24,6 +24,18 @@
 
 <body <?php body_class(); ?>>
 
+<div id="clouds">
+    <!--[if gt IE 8]><!-->
+    <div class="cloud x1"></div>
+    <div class="cloud x2"></div>
+    <div class="cloud x3"></div>
+    <div class="cloud x4"></div>
+    <div class="cloud x5"></div>
+    <!--<![endif]-->
+</div>
+
+<div id="body-wrapper">
+
   <!--[if lt IE 7]><div class="alert">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</div><![endif]-->
 
   <?php roots_header_before(); ?>

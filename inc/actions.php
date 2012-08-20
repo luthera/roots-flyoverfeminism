@@ -29,3 +29,9 @@ function roots_google_analytics() {
 }
 
 add_action('roots_footer', 'roots_google_analytics');
+
+function roots_after_post() {
+  echo "\n\t<hr />\n";
+}
+
+add_action('roots_post_after', 'roots_after_post');
