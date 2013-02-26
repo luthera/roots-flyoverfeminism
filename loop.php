@@ -1,6 +1,6 @@
 <?php /* If there are no posts to display, such as an empty archive page */ ?>
 <?php if (!have_posts()) { ?>
-  <div class="alert alert-block fade in">
+<div class="alert alert-block fade in" xmlns="http://www.w3.org/1999/html">
     <a class="close" data-dismiss="alert">&times;</a>
     <p><?php _e('Sorry, no results were found.', 'roots'); ?></p>
   </div>
@@ -10,22 +10,28 @@
 <?php /* Start loop */ ?>
 <?php while (have_posts()) : the_post(); ?>
   <?php roots_post_before(); ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class('grid'); ?>>
     <?php roots_post_inside_before(); ?>
       <header>
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-        <?php roots_entry_meta(); ?>
         <p><?php comments_popup_link(__('Leave a comment', 'roots'), __('Read one comment', 'roots'), __('Read % comments', 'roots')); ?></p>
       </header>
       <div class="entry-content">
-        <?php if (is_archive() || is_search()) { ?>
+        <!-- ?php if (is_archive() || is_search()) { ? -->
           <?php the_excerpt(); ?>
-        <?php } else { ?>
-          <?php the_content(); ?>
-        <?php } ?>
+        <!-- ?php } else { ? -->
+          <!-- ?php the_content(); ? -->
+        <!-- ?php } ? -->
       </div>
       <footer>
-        <?php $tags = get_the_tags(); if ($tags) { ?><p><?php the_tags(); ?></p><?php } ?>
+        <div class="meta group">
+          <div class="signature">
+            <?php roots_entry_meta(); ?>
+          </div>
+          <!-- div class="tags">
+            <?php $tags = get_the_tags(); if ($tags) { ?><p><?php the_tags(); ?></p><?php } ?></p>
+          </div -->
+        </div>
       </footer>
     <?php roots_post_inside_after(); ?>
     </article>

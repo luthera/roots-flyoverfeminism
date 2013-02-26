@@ -69,10 +69,10 @@ blockquote p {
 
 /*Time to animate*/
 .x1 {
-    -moz-animation: moveclouds 35s linear infinite;
+    /*-moz-animation: moveclouds 35s linear infinite;
     -webkit-animation: moveclouds 35s linear infinite;
     -o-animation: moveclouds 35s linear infinite;
-    animation: moveclouds 35s linear infinite;
+    animation: moveclouds 35s linear infinite;*/
 }
 
 /*variable speed, opacity, and position of clouds for realistic effect*/
@@ -87,10 +87,10 @@ blockquote p {
     opacity: 0.6; /*opacity proportional to the size*/
 
     /*Speed will also be proportional to the size and opacity*/
-    -moz-animation: moveclouds 45s linear infinite;
+    /*-moz-animation: moveclouds 45s linear infinite;
     -webkit-animation: moveclouds 45s linear infinite;
     -o-animation: moveclouds 45s linear infinite;
-    animation: moveclouds 45s linear infinite;
+    animation: moveclouds 45s linear infinite;*/
  }
 
  .x3 {
@@ -104,10 +104,10 @@ blockquote p {
      transform: scale(0.8);
      opacity: 0.8; /*opacity proportional to the size*/
 
-     -moz-animation: moveclouds 35s linear infinite;
+    /* -moz-animation: moveclouds 35s linear infinite;
      -webkit-animation: moveclouds 35s linear infinite;
      -o-animation: moveclouds 35s linear infinite;
-     animation: moveclouds 35s linear infinite;
+     animation: moveclouds 35s linear infinite;*/
 }
 
 .x4 {
@@ -121,10 +121,10 @@ blockquote p {
     transform: scale(0.75);
     opacity: 0.75; /*opacity proportional to the size*/
 
-    -moz-animation: moveclouds 35s linear infinite;
+    /*-moz-animation: moveclouds 35s linear infinite;
     -webkit-animation: moveclouds 35s linear infinite;
     -o-animation: moveclouds 35s linear infinite;
-    animation: moveclouds 35s linear infinite;
+    animation: moveclouds 35s linear infinite;*/
 }
 
 .x5 {
@@ -138,10 +138,10 @@ blockquote p {
     transform: scale(0.8);
     opacity: 0.8; /*opacity proportional to the size*/
 
-    -moz-animation: moveclouds 35s linear infinite;
+    /*-moz-animation: moveclouds 35s linear infinite;
     -webkit-animation: moveclouds 35s linear infinite;
     -o-animation: moveclouds 35s linear infinite;
-    animation: moveclouds 35s linear infinite;
+    animation: moveclouds 35s linear infinite;*/
 }
 
 @-moz-keyframes moveclouds {
@@ -170,9 +170,9 @@ blockquote p {
 #banner { }
 
 /* Fixed Topbar Navigation */
-body.top-navbar {
-   //padding-top: 60px;
-}
+/*body.top-navbar {
+   padding-top: 60px;
+}*/
 body.admin-bar .navbar-fixed-top {
     top: 28px;
 }
@@ -260,6 +260,11 @@ figure {
     max-width: 100%;
 }
 
+figure img {
+    width: 100%;
+    height: auto;
+}
+
 /* =============================================================================
    Sidebar
    ========================================================================== */
@@ -273,10 +278,60 @@ figure {
    ========================================================================== */
 
 .hentry header { }
+.hentry header h2 {
+    font-size: 16px;
+    line-height: 18px;
+}
 .hentry time { }
 .hentry p.byline { }
 .hentry .entry-content { }
 .hentry footer { }
+
+.hentry footer .meta {
+    background: #F3F3F3;
+    font-size: 11px;
+    line-height: 15px;
+    color: #333;
+    padding: 5px 10px;
+    margin: 0 0 30px 0;
+    border-top: #BBB 1px solid;
+    clear: both;
+}
+
+.hentry footer .group::after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.signature {
+    float: left;
+    padding: 0 15px 0 0;
+    //border-right: #BBB 1px solid;
+    //width: 200px;
+}
+
+.tags {
+    float: left;
+    padding: 0 15px 0 0;
+    //width: 440px;
+}
+
+.grid {
+    border-right: 1px solid #E0E0E0;
+    border-left: 1px solid #E0E0E0;
+    border-top: 1px solid #E0E0E0;
+    display: block;
+    float: left;
+    height: 480px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    width: 155px;
+    word-wrap: break-word;
+}
 
 
 

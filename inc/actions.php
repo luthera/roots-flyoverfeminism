@@ -30,8 +30,8 @@ function roots_google_analytics() {
 
 add_action('roots_footer', 'roots_google_analytics');
 
-function roots_after_post() {
-  echo "\n\t<hr />\n";
+function fem_head() {
+    echo "\n\t<link rel=\"shortcut icon\" href=\"/favicon.ico\" />\n";
 }
 
-add_action('roots_post_after', 'roots_after_post');
+add_action('roots_head', 'fem_head');

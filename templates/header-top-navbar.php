@@ -1,7 +1,7 @@
 <header id="banner" class="navbar navbar-fixed-top" role="banner">
   <?php roots_header_inside(); ?>
   <div class="logo-banner span12">
-      <img class="logo-image" src="<?php echo get_template_directory_uri(); ?>/img/femplane3.png"/>
+      <img class="logo-image" src="<?php echo get_template_directory_uri(); ?>/img/femplane3.png" alt="<?php echo __('Site logo depicting a paper airplane', 'roots'); ?>" title="<?php echo __('Flyover Feminism Paper Airplane', 'roots'); ?>"/>
       <hgroup class="logo-text">
           <h1 class="logo-main-text">
               <?php bloginfo('name'); ?>
